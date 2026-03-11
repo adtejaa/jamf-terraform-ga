@@ -37,7 +37,7 @@ variable "build_new" {
 variable "jamfpro_instance_fqdn" {
   description = "The Jamf Pro FQDN (fully qualified domain name). Example: https://mycompany.jamfcloud.com"
   sensitive   = true
-  default     = ""
+  
 }
 
 variable "jamfpro_auth_method" {
@@ -60,13 +60,13 @@ variable "jamfpro_auth_method" {
 
 variable "jamfpro_basic_auth_username" {
   description = "The Jamf Pro username used for authentication."
-  default     = ""
+  
 }
 
 variable "jamfpro_basic_auth_password" {
   description = "The Jamf Pro password used for authentication."
   sensitive   = true
-  default     = ""
+  
 }
 
 variable "enable_client_sdk_logs" {
