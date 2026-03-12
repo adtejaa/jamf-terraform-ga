@@ -18,7 +18,7 @@ terraform {
     bucket         = "aws-ga-jamf-tf-state"
     key            = "jamf/ga/march2026/statefile/terraform.tfstate"
     region         = "us-east-1"
-    dynamodb_table = "jamf_lock_table"
+    # dynamodb_table = "jamf_lock_table"
     use_lockfile = true
     encrypt        = true
   }
