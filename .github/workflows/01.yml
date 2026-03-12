@@ -6,6 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: First step
-        run: |
-          echo "This is the first step of the first workflow."
-          echo "second run command"
+        uses: actions/checkout@v4
+      - name: Second step
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.13.4
+      - name: Third step
+        run: terraform fmt
+      - name: Fourth step
+        run: terraform validate
+      - name: Fifth step
+        run: terraform plan
