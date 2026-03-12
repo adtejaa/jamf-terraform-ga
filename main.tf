@@ -12,17 +12,26 @@ terraform {
   }
 }
 
-
 terraform {
   backend "s3" {
-    bucket         = "aws-ga-jamf-tf-state"
+    bucket         = "aws-jamf-tf-state"
     key            = "jamf/ga/march2026/statefile/terraform.tfstate"
     region         = "us-east-1"
-    # dynamodb_table = "jamf_lock_table"
-    use_lockfile = true
+    dynamodb_table = "jamf_lock_table"
     encrypt        = true
   }
 }
+
+# terraform {
+#   backend "s3" {
+#     bucket         = "aws-ga-jamf-tf-state"
+#     key            = "jamf/ga/march2026/statefile/terraform.tfstate"
+#     region         = "us-east-1"
+#     # dynamodb_table = "jamf_lock_table"
+#     use_lockfile = true
+#     encrypt        = true
+#   }
+# }
 
 
 
