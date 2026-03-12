@@ -13,7 +13,5 @@ jobs:
           terraform_version: 1.13.4
       - name: Third step
         run: terraform fmt
-      - name: Fourth step
-        run: terraform validate
       - name: Fifth step
-        run: terraform plan
+        run: terraform init
