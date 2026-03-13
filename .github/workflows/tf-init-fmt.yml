@@ -1,6 +1,8 @@
 name: Terraform initialization and formatting
 
-on: [push,  workflow_dispatch]
+on:
+  pull_request:
+    types: [closed]
 
 jobs:
   first_job:
