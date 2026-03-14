@@ -1,6 +1,17 @@
 name: Terraform initialization and formatting
 
-on: [push,  workflow_dispatch]
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+      - 'feature/**'
+      - '**/**'
+      - 'fix/**'
+  push:
+    branches:
+      - develop
+      - 'feature/**'
 
 jobs:
   first_job:
