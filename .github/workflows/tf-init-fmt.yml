@@ -8,6 +8,10 @@ on:
       - 'feature/**'
       - '**/**'
       - 'fix/**'
+  push:
+    branches:
+      - develop
+      - 'feature/**'
 
 jobs:
   first_job:
